@@ -1,0 +1,22 @@
+{% include 'header.html' %}
+
+<br><br><br>
+
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-danger mb-0">Create New Gesture</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <center>
+                <form action="{{ url_for("create")}}" method="post">
+                    <label for="Gesture">Name of Gesture:</label>
+                    <input type="text" id="Gesture" name="Gesture" placeholder="Gesture">
+                    
+                    <button type="submit">Submit</button>
+                </center>
+    </section>

@@ -1,0 +1,80 @@
+{% include 'header.html' %}
+
+<!-- <!DOCTYPE html>
+<html>
+
+
+  <body>
+    <h1>Live streaming</h1>
+    <div>
+
+        <center><img src="{{ url_for('video') }}" width="50%"/></center>
+    </div>
+            
+    </body>
+
+
+</html> -->
+
+
+
+<br><br><br>
+
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-warning mb-0">Scan Gesture</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <center><img src="{{ url_for('video') }}" width="50%"/>
+                <br>
+            <button class="btn btn-primary" data-bs-dismiss="modal" id = "mybutton">
+                <!-- <i class="fas fa-xmark fa-fw"></i> -->
+                Add letter
+            </button>
+            <button class="btn btn-primary" data-bs-dismiss="modal" id = "mybuttonRemove">
+                <!-- <i class="fas fa-xmark fa-fw"></i> -->
+                Remove letter
+            </button>
+            <button class="btn btn-primary" data-bs-dismiss="modal" id = "mybuttonaddSpace">
+                <!-- <i class="fas fa-xmark fa-fw"></i> -->
+                Add space character
+            </button>
+        </center>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+    <script type=text/javascript> 
+    $(function() { 
+        $("#mybutton").click(function (event) { 
+            $.getJSON('/addGlobalVariable', { },
+                function(data) { 
+                        console.log("hi");
+                }); 
+            return false; 
+        }); 
+    }); 
+    $(function() { 
+        $("#mybuttonRemove").click(function (event) { 
+            $.getJSON('/removeGlobalVariable', { },
+                function(data) { 
+                        
+                }); 
+            return false; 
+        }); 
+    }); 
+    $(function() { 
+        $("#mybuttonaddSpace").click(function (event) { 
+            $.getJSON('/addSpaceGlobalVariable', { },
+                function(data) { 
+                        
+                }); 
+            return false; 
+        }); 
+    }); 
+    </script> 
